@@ -6,12 +6,12 @@
     <script src="https://tailwindcss.com"></script>
     <title>Daanish Qayyum</title>
   </head>
-  <body class="bg-pink-100 min-h-[150vh]">
+  <body class="bg-pink-100 min-h-[150vh] m-0">
 
-    <!-- Top Video Section (Behind Name & Bio) -->
+    <!-- Full-Width Video Hero Section -->
     <div class="relative w-full h-[550px] overflow-hidden">
       
-      <!-- Video (Top pixels cropped off using object-bottom) -->
+      <!-- Video Spanning Full Width & Cropped From Top -->
       <video 
         src="video.mp4" 
         autoplay 
@@ -21,38 +21,32 @@
         class="absolute inset-0 w-full h-full object-cover object-bottom"
       ></video>
 
-      <!-- Content Sitting on Top of the Video -->
-      <div class="relative z-10 h-full flex flex-col justify-between p-8">
+      <!-- Name & Bio Sitting Over the Video -->
+      <div class="relative z-10 p-8 max-w-xl text-left">
         
         <!-- Top-Left Name Picture -->
-        <header class="text-left">
-          <img 
-            src="daanishran.png" 
-            alt="Daanish Qayyum" 
-            class="w-64 sm:w-80"
-          />
-        </header>
+        <img 
+          src="daanishran.png" 
+          alt="Daanish Qayyum" 
+          class="w-64 sm:w-80 mb-6"
+        />
 
-        <!-- Centered Bio Text -->
-        <main class="max-w-xl mx-auto text-center my-auto">
-          <div class="bg-pink-100/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm">
-            <p class="text-gray-900 mb-3 text-lg font-medium">
-              Hi! I'm a 15-year-old aspiring mechanical engineer attending Edison Academy Magnet School.
-            </p>
-            
-            <p class="text-gray-900 text-lg font-medium">
-              I like to watch films, take <a href="photography.html" class="underline font-bold hover:text-pink-600">pictures</a>, and build.
-            </p>
-          </div>
-        </main>
+        <!-- Bio Text Below Name -->
+        <div class="bg-pink-100/85 backdrop-blur-sm p-5 rounded-2xl shadow-sm">
+          <p class="text-gray-900 mb-3 text-lg font-medium">
+            Hi! I'm a 15-year-old aspiring mechanical engineer attending Edison Academy Magnet School.
+          </p>
+          
+          <p class="text-gray-900 text-lg font-medium">
+            I like to watch films, take <a href="photography.html" class="underline font-bold hover:text-pink-600">pictures</a>, and build.
+          </p>
+        </div>
 
       </div>
     </div>
 
-    <!-- Pink Space Below (Visible When You Scroll Down) -->
-    <div class="p-8 text-center">
-      <!-- Everything below the video shows the bg-pink-100 background -->
-    </div>
+    <!-- Pink Space Below (Visible When Scrolling) -->
+    <div class="p-8"></div>
 
   </body>
 </html>
