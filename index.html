@@ -6,44 +6,53 @@
     <script src="https://tailwindcss.com"></script>
     <title>Daanish Qayyum</title>
   </head>
-  <body class="bg-pink-100 text-center min-h-screen p-8">
+  <body class="bg-pink-100 min-h-[150vh]">
 
-    <!-- Top-Left Name Picture -->
-    <header class="p-6 text-left">
-      <img 
-        src="daanishran.png" 
-        alt="Daanish Qayyum" 
-        class="w-64 sm:w-80 mix-blend-multiply"
-      />
-    </header>
-
-    <!-- Main Content -->
-    <main class="max-w-xl mx-auto px-6 mt-12 text-center">
+    <!-- Top Video Section (Behind Name & Bio) -->
+    <div class="relative w-full h-[550px] overflow-hidden">
       
-      <!-- Bio Section (with large bottom margin so you scroll to reach the video) -->
-      <div class="mb-96">
-        <p class="text-gray-900 mb-3 text-lg font-medium">
-          Hi! I'm a 15-year-old aspiring mechanical engineer attending Edison Academy Magnet School.
-        </p>
+      <!-- Video (Top pixels cropped off using object-bottom) -->
+      <video 
+        src="video.mp4" 
+        autoplay 
+        loop 
+        muted 
+        playsinline 
+        class="absolute inset-0 w-full h-full object-cover object-bottom"
+      ></video>
+
+      <!-- Content Sitting on Top of the Video -->
+      <div class="relative z-10 h-full flex flex-col justify-between p-8">
         
-        <p class="text-gray-900 text-lg font-medium">
-          I like to watch films, take <a href="photography.html" class="underline font-bold hover:text-pink-600">pictures</a>, and build.
-        </p>
-      </div>
+        <!-- Top-Left Name Picture -->
+        <header class="text-left">
+          <img 
+            src="daanishran.png" 
+            alt="Daanish Qayyum" 
+            class="w-64 sm:w-80"
+          />
+        </header>
 
-      <!-- Smaller Looping Video at the Bottom -->
-      <div class="pb-16">
-        <video 
-          src="video.mp4" 
-          autoplay 
-          loop 
-          muted 
-          playsinline 
-          class="mx-auto rounded-xl shadow-lg w-full max-w-xs"
-        ></video>
-      </div>
+        <!-- Centered Bio Text -->
+        <main class="max-w-xl mx-auto text-center my-auto">
+          <div class="bg-pink-100/80 backdrop-blur-sm p-6 rounded-2xl shadow-sm">
+            <p class="text-gray-900 mb-3 text-lg font-medium">
+              Hi! I'm a 15-year-old aspiring mechanical engineer attending Edison Academy Magnet School.
+            </p>
+            
+            <p class="text-gray-900 text-lg font-medium">
+              I like to watch films, take <a href="photography.html" class="underline font-bold hover:text-pink-600">pictures</a>, and build.
+            </p>
+          </div>
+        </main>
 
-    </main>
+      </div>
+    </div>
+
+    <!-- Pink Space Below (Visible When You Scroll Down) -->
+    <div class="p-8 text-center">
+      <!-- Everything below the video shows the bg-pink-100 background -->
+    </div>
 
   </body>
 </html>
